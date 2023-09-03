@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Number</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <button class="help button-show-modal">Help</button>
+        <div class="highscore-container">
+          <p class="highscore-label">
+            Highscore:
+            <span class="highscore">0</span>
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Container -->
+    <div class="container">
+      <div class="main-container">
+        <h1 class="title">Guess the secret number</h1>
+        <button class="restart-game">Restart game</button>
+        <div class="secret-number">?</div>
+        <h2 class="hints">Hint: Start guessing…</h2>
+        <div class="check-container">
+          <input type="number" class="input-number" />
+          <br />
+          <button class="button-check">Check !</button>
+        </div>
+      </div>
+      <div class="secondary-container">
+        <div class="score-container">
+          <p class="label-score">
+            Score:
+            <span class="score">20</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal window -->
+    <div class="modal hidden">
+      <button class="button-icon-close-modal">&times;</button>
+      <div class="modal-container">
+        <h1 class="modal-header">Game rules</h1>
+        <ul class="modal-list">
+          <li class="modal-list-item">Number range is between 1 and 20;</li>
+          <li class="modal-list-item">
+            When you click “check” button, the score decreases by one;
+          </li>
+          <li class="modal-list-item">
+            If score decrease reaches 0 you lose the game;
+          </li>
+          <li class="modal-list-item">
+            If the number is correct then you win the game and your highest
+            score will be saved on display;
+          </li>
+          <li class="modal-list-item">
+            Reset game using the “Reset game” button;
+          </li>
+          <li class="modal-list-item">Reload webpage for complete reset.</li>
+        </ul>
+        <button class="button-close-modal">Close</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <!-- End of Modal window -->
+    <!-- End of Container -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
